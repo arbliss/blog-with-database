@@ -14,7 +14,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGO_CONNECT, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect(process.env.MONGO_CONNECT,
+  {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false}).catch(error => handleError(error));
 
 const postsSchema = {
   title: String,
@@ -82,8 +83,21 @@ app.get("/posts/:postId", function(req, res){
     if (!err) {
       res.render("post", {
       title: post.title,
-      content: post.content
+      content: post.content,
+      postId: requestedPostId
       });
+    }
+  });
+});
+
+app.post("/posts/delete", function(req, res){
+  const requestedPostId = req.body.postId;
+
+  Post.findByIdAndDelete(requestedPostId, function (err) {
+    if (err) {
+      console.log("err");
+    } else {
+      res.redirect("/");
     }
   });
 });
