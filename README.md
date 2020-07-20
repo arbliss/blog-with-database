@@ -1,15 +1,16 @@
 # EJS Blog with Mongo database
-> This is a sample blog site I built using HTML, CSS, Javascript, Node.js, Express and Mongo
+This is a sample blog site I built using HTML, CSS, Javascript, Node.js, Express and Mongo
 
 ## General info
-This project was for learning to add a mongodb backend to persist the data, versus the previous version which just used variables that would reset when the server did.
+This project was for learning to add a mongoDB backend to persist the data, versus the previous version which just used variables that would reset when the server did.
 
 ## Screenshots
-![Example screenshot](./img/blogwithdb1.jpg)
+DEMO: https://arbliss-blog-site.herokuapp.com/
+![Example screenshot](./images/blogwithdb1.jpg)(./images/blogwithdb2.jpg)
 
 ## Technologies
 * Node.js
-* MongoDB
+* mongoDB
 * Express
 * EJS
 * HTML/CSS/Javascript
