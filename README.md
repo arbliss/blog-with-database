@@ -6,7 +6,9 @@ This project was for learning to add a mongoDB backend to persist the data, vers
 
 ## Screenshots
 DEMO: https://arbliss-blog-site.herokuapp.com/
-![Main Page](public/images/blogwithdb1.JPG) ![Blog Page](public/images/blogwithdb2.JPG)
+
+![Main Page](public/images/blogwithdb1.JPG)
+![Blog Page](public/images/blogwithdb2.JPG)
 
 ## Technologies
 * Node.js
@@ -16,27 +18,39 @@ DEMO: https://arbliss-blog-site.herokuapp.com/
 * HTML/CSS/Javascript
 
 ## Setup
+run mongodb server (local or cloud)
 node app.js
 
 ## Code Examples
 Show examples of usage:
-`put-your-code-here`
+`app.get("/posts/:postId", function(req, res){
+  const requestedPostId = req.params.postId;
+
+  Post.findOne({_id: requestedPostId}, function(err, post){
+    if (!err) {
+      res.render("post", {
+      title: post.title,
+      content: post.content,
+      postId: requestedPostId
+      });
+    }
+  });
+});`
 
 ## Features
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* Can add and delete blog posts from database
+* Dynamic routes that display created posts
 
 To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+* Add user authentication
+* Store blog posts by user
 
 ## Status
 Project is: _finished_
 
 ## Inspiration
-Add here credits. Project inspired by..., based on...
+Project inspired by a STRONG desire to learn!
 
 ## Contact
 Created by https://www.linkedin.com/in/adam-bliss-50951321/ - feel free to contact me!
