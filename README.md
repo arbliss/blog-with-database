@@ -6,7 +6,7 @@ This project was for learning to add a mongoDB backend to persist the data, vers
 
 ## Screenshots
 DEMO: https://arbliss-blog-site.herokuapp.com/
-![Example screenshot](./images/blogwithdb1.jpg)(./images/blogwithdb2.jpg)
+![Main Page](public/images/blogwithdb1.JPG) ![Blog Page](public/images/blogwithdb2.JPG)
 
 ## Technologies
 * Node.js
