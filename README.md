@@ -22,8 +22,9 @@ run mongodb server (local or cloud)
 node app.js
 
 ## Code Examples
-Show examples of usage:
-`app.get("/posts/:postId", function(req, res){
+
+```Javascript
+app.get("/posts/:postId", function(req, res){
   const requestedPostId = req.params.postId;
 
   Post.findOne({_id: requestedPostId}, function(err, post){
@@ -35,7 +36,8 @@ Show examples of usage:
       });
     }
   });
-});`
+});
+```
 
 ## Features
 List of features ready and TODOs for future development
