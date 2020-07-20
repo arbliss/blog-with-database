@@ -4,10 +4,14 @@ This is a sample blog site I built using HTML, CSS, Javascript, Node.js, Express
 ## General info
 This project was for learning to add a mongoDB backend to persist the data, versus the previous version which just used variables that would reset when the server did.
 
-## Screenshots
+##Demo
+
 DEMO: https://arbliss-blog-site.herokuapp.com/
 
+## Screenshots
+
 ![Main Page](public/images/blogwithdb1.JPG)
+
 ![Blog Page](public/images/blogwithdb2.JPG)
 
 ## Technologies
@@ -18,8 +22,9 @@ DEMO: https://arbliss-blog-site.herokuapp.com/
 * HTML/CSS/Javascript
 
 ## Setup
-run mongodb server (local or cloud)
-node app.js
+* run mongodb server (local or cloud)
+* run `npm install` in the command line, from the working directory
+* then run `node app.js`
 
 ## Code Examples
 
