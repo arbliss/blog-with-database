@@ -4,7 +4,7 @@ This is a sample blog site I built using HTML, CSS, Javascript, Node.js, Express
 ## General info
 This project was for learning to add a mongoDB backend to persist the data, versus the previous version which just used variables that would reset when the server did.
 
-##Demo
+## Demo
 
 DEMO: https://arbliss-blog-site.herokuapp.com/
 
